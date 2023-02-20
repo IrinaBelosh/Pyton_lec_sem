@@ -1,37 +1,37 @@
-# # Задача 1. Задайте список из произвольных чисел, количество задает пользователь.
-# # Напишите программу определяющую присутствует ли в заданном списке
-# # число, полученное от пользователя.
-# # Пример
-# # in  10
-# #     2
-# # out [13,45,2,7,65,2]
-# #     'The number 2 is present in the list'
+# Задача 1. Задайте список из произвольных чисел, количество задает пользователь.
+# Напишите программу определяющую присутствует ли в заданном списке
+# число, полученное от пользователя.
+# Пример
+# in  10
+#     2
+# out [13,45,2,7,65,2]
+#     'The number 2 is present in the list'
 
-# import os
-# clear = lambda:os.system('cls')
-# clear()
+import os
+clear = lambda:os.system('cls')
+clear()
 
-# # # Первый способ
-# # import random # Вызываем модуль
-# # import.sample() # Обращаемся к функции модуля
+# # Первый способ
+# import random # Вызываем модуль
+# import.sample() # Обращаемся к функции модуля
 
 
-# from random import sample # Второй способ вызова
+from random import sample # Второй способ вызова
 
-# def find_number (f_length, f_number):
-#     my_list = sample(range((f_length+1)*2), f_length)
-#     print(my_list)
-#     if f_number in my_list:
-#         return 'YES'
-#     return 'NO'
+def find_number (f_length, f_number):
+    my_list = sample(range((f_length+1)*2), f_length)
+    print(my_list)
+    if f_number in my_list:
+        return 'YES'
+    return 'NO'
 
-# # answer = find_number(length, number)
-# # print(answer)
-
-# # Вариант без отдельного воода данных от пользователя (всё в одну строку)
-# answer = find_number(int(input('Enter the number of elements: ')),\
-#     int(input('Enter the element to look for: ')))
+# answer = find_number(length, number)
 # print(answer)
+
+# Вариант без отдельного воода данных от пользователя (всё в одну строку)
+answer = find_number(int(input('Enter the number of elements: ')),\
+    int(input('Enter the element to look for: ')))
+print(answer)
 
 # --------------------------------------------
 # Задача 2. Задайте список из произвольных слов, количество задает пользователь
